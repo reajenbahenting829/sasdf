@@ -12,17 +12,13 @@ const props = defineProps({
 <template>
     <Head title="Clients" />
     <Layout title="Clients">
-        <div class="flex justify-between bg-pink-400">
-            <h2 class="font-bold text-4xl text-white ml-8 mt-4 mb-4">
+        <div class="flex justify-between bg-light-400">
+            <h2 class="font-bold text-4xl text-dark ml-8 mt-4 mb-4">
                 Clients List
             </h2>
         </div>
         <div class="flex justify-end">
-            <a
-                href="/clients/create"
-                class="float-right bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-3 mr-3"
-                >Add client</a
-            >
+           
         </div>
 
         <div class="max-w-7xl mx-auto mt-4">

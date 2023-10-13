@@ -11,9 +11,9 @@ const props = defineProps({
 <template>
     <Head title="SoldItems" />
     <Layout title="SoldItems">
-        <div class="flex justify-between bg-pink-400">
-            <h2 class="font-bold text-4xl text-white ml-8 mt-4 mb-4">
-                Sold Items List
+        <div class="flex justify-between bg-light-400">
+            <h2 class="font-bold text-4xl text-dark ml-8 mt-4 mb-4">
+                Sold Items
             </h2>
         </div>
 
@@ -31,8 +31,8 @@ const props = defineProps({
                 <tbody>
                     <tr v-for="soldItem in soldItems.data" :key="soldItem.id">
                         <td class="border px-4 py-2">{{ soldItem.product.name }}</td>
-                        <td class="border px-4 py-2"><i class="fas fa-peso-sign"></i> {{ soldItem.product.retail_price }}</td>
-                        <td class="border px-4 py-2"><i class="fas fa-peso-sign"></i> {{ soldItem.amount }}</td>
+                        <td class="border px-4 py-2"> {{ soldItem.product.retail_price }}</td>
+                        <td class="border px-4 py-2">{{ soldItem.amount }}</td>
                         <td class="border px-4 py-2">{{ soldItem.qty }}</td>
                         <td class="border px-4 py-2">{{ soldItem.sale.date }}</td>
 

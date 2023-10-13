@@ -8,10 +8,10 @@ const props = defineProps({});
 <template>
     <Head title="Create Client" />
     <Layout title="Create Client">
-        <div class="flex justify-between bg-pink-400">
+        <!-- <div class="flex justify-between bg-pink-400">
             <h2 class="font-bold text-4xl text-white ml-8 mt-4 mb-4">
                 Create Client
             </h2>
-        </div>
+        </div> -->
     </Layout>
 </template>

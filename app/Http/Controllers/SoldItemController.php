@@ -10,7 +10,7 @@ class SoldItemController extends Controller
 {
     public function index()
     {
-        $soldItems = SoldItem::with(['product', 'sale'])->paginate(10);
+        $soldItems = SoldItem::with(['product', 'sale'])->paginate(5);
 
         return Inertia::render('Cashier/SoldItem', [
             'soldItems' => $soldItems,

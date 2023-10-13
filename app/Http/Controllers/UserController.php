@@ -10,7 +10,7 @@ class UserController extends Controller
 {
     public function index()
     {
-        $users = User::with('roles')->paginate(10);
+        $users = User::with('roles')->paginate(5);
 
         return Inertia::render('Admin/Index', [
             'users' => $users,
@@ -19,7 +19,7 @@ class UserController extends Controller
 
     public function cashier()
     {
-        $cashiers = User::where('name', 'Cashier')->with('roles')->paginate(10);
+        $cashiers = User::where('name', 'Cashier')->with('roles')->paginate(5);
         return Inertia::render('SuperVisor/Index', [
             'cashiers' => $cashiers,
         ]);
