@@ -15,21 +15,21 @@ class AdminSeeder extends Seeder
     {
         User::factory()->create([
             'name' => 'Admin',
-            'email' => 'admin@email.com',
+            'email' => 'admin@gmail.com',
             'password' => bcrypt('password123')
         ])->assignRole('Admin', 'Super Visor', 'Cashier')
             ->givePermissionTo('manage-users', 'manage-cashiers', 'manage-sales');
 
         User::factory()->create([
             'name' => 'Super Visor',
-            'email' => 'supervisor@email.com',
+            'email' => 'supervisor@gmail.com',
             'password' => bcrypt('password123')
         ])->assignRole('Super Visor', 'Cashier')
             ->givePermissionTo('manage-sales', 'manage-cashiers');
 
         User::factory()->create([
             'name' => 'Cashier',
-            'email' => 'cashier@email.com',
+            'email' => 'cashier@gmail.com',
             'password' => bcrypt('password123')
         ])->assignRole('Cashier')
             ->givePermissionTo('manage-sales');

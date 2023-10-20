@@ -1,3 +1,4 @@
+
 <script setup>
 import { Link } from "@inertiajs/vue3";
 import { defineProps } from "vue";
@@ -30,8 +31,18 @@ const { hidden } = defineProps(["hidden"]);
             title="Clients List"
         >
             <i class="fa-solid fa-user"></i>
-            <span :hidden="hidden"> Clients</span>
+            <span :hidden="hidden"> Clients List</span>
         </Link>
+
+        <!-- <Link
+            v-if="$page.props.auth.user.permissions.includes('manage-cashiers')"
+            :href="route('cashiers')"
+            :active="route().current('cashiers')"
+            title="Cashiers List"
+        >
+            <i class="fa-solid fa-user-tag"></i>
+            <span :hidden="hidden"> Cashiers List</span>
+        </Link> -->
         <Link
             v-if="$page.props.auth.user.permissions.includes('manage-sales')"
             :href="route('products')"
@@ -41,7 +52,15 @@ const { hidden } = defineProps(["hidden"]);
             <i class="fa-solid fa-box"></i>
             <span :hidden="hidden"> Products</span>
         </Link>
-    
+        <!-- <Link
+            v-if="$page.props.auth.user.permissions.includes('manage-sales')"
+            :href="route('sold.items')"
+            :active="route().current('sold.items')"
+            title="Sold Items"
+        >
+            <i class="fa-solid fa-tag"></i>
+            <span :hidden="hidden"> Sold Items</span>
+        </Link> -->
         <Link
             v-if="$page.props.auth.user.permissions.includes('manage-sales')"
             :href="route('sales')"
@@ -51,7 +70,10 @@ const { hidden } = defineProps(["hidden"]);
             <i class="fa-solid fa-chart-line"></i>
             <span :hidden="hidden"> Sales</span>
         </Link>
-        
+        <Link :href="route('profile.edit')">
+            <i class="fa-solid fa-user"></i>
+            <span :hidden="hidden"> Profile</span>
+        </Link>
 
         <Link :href="route('logout')" method="post" title="Logout">
             <i class="fa-solid fa-right-from-bracket"></i>

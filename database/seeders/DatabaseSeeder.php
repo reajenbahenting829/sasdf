@@ -23,7 +23,7 @@ class DatabaseSeeder extends Seeder
         $this->call(ProductSeeder::class);
         $this->call(ClientSeeder::class);
 
-        Sale::factory(50)->create();
-         SoldItem::factory(50)->create();
+        Sale::factory(100)->create();
+         SoldItem::factory(300)->create();
     }
 }

@@ -1,5 +1,6 @@
 <script setup>
 import Layout from "@/Layouts/Layout.vue";
+import Pagination from "@/Layouts/Pagination.vue";
 import { Head } from "@inertiajs/vue3";
 
 const props = defineProps({
@@ -10,26 +11,27 @@ const props = defineProps({
 <template>
     <Head title="Users" />
     <Layout title="Users">
-        <div class="flex justify-between bg-light-400">
-            <h2 class="font-bold text-4xl text-dark ml-8 mt-4 mb-4">
-                Users
+        <div class="flex justify-between bg-pink-700">
+            <h2 class="font-bold text-4xl text-light ml-8 mt-4 mb-4">
+                Users List
             </h2>
         </div>
 
         <div class="overflow-x-auto">
+            <a href="/admin/users/create" class="float-right bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-3 mr-3">Add user</a>
             <table class="table-auto min-w-full">
                 <thead>
                     <tr>
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Roles</th>
+                        <th class="px-4 py-2">Name</th>
+                        <th class="px-4 py-2">Email</th>
+                        <th class="px-4 py-2">Roles</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr v-for="user in users.data" :key="user.id">
-                        <td>{{ user.name }}</td>
-                        <td>{{ user.email }}</td>
-                        <td>
+                        <td class="border px-4 py-2">{{ user.name }}</td>
+                        <td class="border px-4 py-2">{{ user.email }}</td>
+                        <td class="border px-4 py-2">
                             <span
                                 v-for="role in user.roles"
                                 :key="role.id"
@@ -41,7 +43,7 @@ const props = defineProps({
                                     'text-yellow-100 bg-yellow-600':
                                         role.name === 'Cashier',
                                 }"
-                                class="ml-1 inline-block px-2 py-6 text-xs "
+                                class="ml-1 inline-block px-2 py-1 text-xs font-semibold leading-none rounded-full"
                             >
                                 {{ role.name }}
                             </span>
