@@ -34,6 +34,7 @@ const { hidden } = defineProps(["hidden"]);
             <span :hidden="hidden"> Clients List</span>
         </Link>
 
+        
         <Link
             v-if="$page.props.auth.user.permissions.includes('manage-sales')"
             :href="route('products')"
@@ -53,7 +54,8 @@ const { hidden } = defineProps(["hidden"]);
             <i class="fa-solid fa-chart-line"></i>
             <span :hidden="hidden"> Sales</span>
         </Link>
-   
+        
+
         <Link :href="route('logout')" method="post" title="Logout">
             <i class="fa-solid fa-right-from-bracket"></i>
             <span :hidden="hidden"> Logout</span>
