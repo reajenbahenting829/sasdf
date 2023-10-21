@@ -27,7 +27,7 @@ function toggleWidth() {
     <div class="flex min-h-screen">
         <div
             id="sidebar"
-            class="bg-gray-800 p-6 duration-500"
+            class="bg-blue-800 p-6 duration-500"
             :class="
                 ([width],
                 {
@@ -56,18 +56,18 @@ function toggleWidth() {
             <MainNav :hidden="hide"></MainNav>
             <div class="mt-5" :hidden="hide">
                 <div class="flex flex-col text-white text-center">
-                    <label for="colorSelect">Dark Mode Settings</label>
+                    <label for="colorSelect"></label>
                     <!-- <select
                         v-model="selectedColor"
                         id="colorSelect"
                         @change="updateColor"
-                        class="bg-white dark:bg-gray-800 p-2 rounded"
+                        class="bg-white dark:bg-blue-800 p-2 rounded"
                     >
                         <option value="red">Light</option>
                         <option value="dark">Dark</option>
                     </select> -->
                     <button
-                        class="border-1 dark:bg-gray-800 p-2 rounded"
+                        class="border-1 "
                         @click="toggleDark()"
                     >
                     <span v-if="isDark">Light Mode</span>
@@ -76,7 +76,7 @@ function toggleWidth() {
                 </div>
             </div>
         </div>
-        <div id="container" class="flex-1 p-3 dark:bg-gray-800 dark:text-white">
+        <div id="container" class="flex-1 p-3 dark:bg-blue-800 dark:text-white">
             <slot />
 
         </div>

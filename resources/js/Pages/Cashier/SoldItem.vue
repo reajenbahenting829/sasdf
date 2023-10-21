@@ -33,8 +33,8 @@ const props = defineProps({
                 <tbody>
                     <tr v-for="soldItem in soldItems.data" :key="soldItem.id">
                         <td class="border px-4 py-2">{{ soldItem.product.name }}</td>
-                        <td class="border px-4 py-2"><i class="fas fa-peso-sign"></i> {{ soldItem.product.retail_price }}</td>
-                        <td class="border px-4 py-2"><i class="fas fa-peso-sign"></i> {{ soldItem.amount }}</td>
+                        <td class="border px-4 py-2">{{ soldItem.product.retail_price }}</td>
+                        <td class="border px-4 py-2">{{ soldItem.amount }}</td>
                         <td class="border px-4 py-2">{{ soldItem.qty }}</td>
                         <td class="border px-4 py-2">{{ soldItem.sale.date }}</td>
 

@@ -11,8 +11,8 @@ const props = defineProps({
 <template>
     <Head title="Sales" />
     <Layout title="Sales">
-        <div class="flex justify-between bg-pink-700">
-            <h2 class="font-bold text-4xl text-white ml-8 mt-4 mb-4">
+        <div class="flex justify-between ">
+            <h2 class="font-bold text-4xl text-dark ml-8 mt-4 mb-4">
                 Sales List
             </h2>
         </div>

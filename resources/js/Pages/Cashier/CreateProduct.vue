@@ -9,7 +9,7 @@ const props = defineProps({});
 <template>
     <Head title="Create Product" />
     <Layout title="Create Product">
-        <div class="flex justify-between bg-pink-700">
+        <div class="flex justify-between">
             <h4 class="font-bold text-4xl text-white ml-8 mt-4 mb-4">
                 Create Product
             </h4>

@@ -8,7 +8,7 @@ const props = defineProps({});
 <template>
     <Head title="Create User" />
     <Layout title="Create User">
-        <div class="flex justify-between bg-pink-700">
+        <div class="flex justify-between ">
             <h2 class="font-bold text-4xl text-white ml-8 mt-4 mb-4">
                 Create User
             </h2>
