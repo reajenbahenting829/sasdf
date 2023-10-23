@@ -11,7 +11,7 @@ const props = defineProps({
 <template>
     <Head title="Cashiers" />
     <Layout title="Cashiers">
-        <div class="flex justify-between bg-pink-400">
+        <div class="flex justify-between bg-pink-700">
             <h2 class="font-bold text-4xl text-white ml-8 mt-4 mb-4">
                 Cashiers List
             </h2>
